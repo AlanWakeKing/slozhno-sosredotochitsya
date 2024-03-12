@@ -1,5 +1,39 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  grid-template-columns: 1fr;
+  background-image:var(--background-image);
+	background-attachment: fixed;
+  background-size: cover;
+	background-position: top center;
+	background-repeat: no-repeat;
+}
+
+.header {
+  display: grid;
+  height: 100vh;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr min-content 1fr;
+	position: relative;
+	margin: 20px;
+}
+.header__rec
+{
+	display: block;
+	right: 28px;
+	top: 0;
+	position: absolute;
+  color: var(--rec-color);
+  text-transform: uppercase;
+}
+.header__rec::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  margin: -5px -20px 0 0;
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px var(--rec-color);
+  background-color: var(--rec-color);
+  top: 50%;
+  right: 0;
 }
