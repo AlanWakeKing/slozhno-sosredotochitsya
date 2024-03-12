@@ -1,5 +1,6 @@
 :root
 {
-	--color-shadow:#FF0070;
+	--accent-color:#FF0070;
+	--transition-duration:0.3s;
 	--font-family: "IBM Plex mono", sans-serif;
 }

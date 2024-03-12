@@ -6,16 +6,23 @@
 	--article-subtitle:var(----article-title);
 	--text-color:var(----article-title);
 	--rec-color:#FFF1F7;
+	--text:var(--article-title);
+	--hover-color: 1px solid rgba(50, 49, 45, 0.4);
+	--corners-color: var(--article-title);
 }
 /*АВТО*/
 @media (prefers-color-scheme: light) {
   :root {
-		--color-title:#DB00FF;
-		--background-color:rgb(0, 0, 40);
+		--color-title:#FFC2E6;
+		--background-color:#FFF1F7;
 		--background-image:url(../images/cover-image-light.png);
 		--article-title:#353430;
 		--article-subtitle:var(----article-title);
 		--text-color:var(----article-title);
+		--rec-color:#FFF1F7;
+		--text:var(--article-title);
+		--hover-color: 1px solid rgba(50, 49, 45, 0.4);
+		--corners-color: var(--article-title);
     }
 }
 
