@@ -1,145 +1,138 @@
 @media screen and (width <=768px) {
-	.header {
-	  display: flex;
-	  flex-direction: column;
-	  row-gap: 17.02vh;
-	  min-height: 984px;
-	}
-  
-	.header__title {
-	  font-size: 120px;
-	}
-  
-	.header__theme-menu {
-	  display: flex;
-	  padding-top: 16.7777777778vh;
-	  justify-content: flex-end;
-	}
-  
-	.header__theme-menu-list {
-	  flex-direction: column;
-	}
-	.header__title-container {
-	  gap: 16vh;
-	}
-	.section__title {
-	  width: 236px;
-	}
-  
-	.article__text-bottom {
-	  padding-bottom: 20px;
-	}
-  
-	.article__way {
-	  width: 66%;
-	}
-  
-	.article__causes {
-	  grid-template-columns: 1fr;
-	  grid-template-rows: repeat(3, min-content);
-	}
-  
-	.footer {
-	  min-height: 984px;
-	}
-  
-	.footer__title {
-	  font-size: 120px;
-	}
+  .header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 17.02vh;
+    min-height: 984px;
   }
-  
-  @media screen and (width <=700px) {
-	.header {
-	  display: flex;
-	  flex-direction: column;
-	  row-gap: 4.0625rem;
-	  min-height: 648px;
-	  padding: 10px 10px 0;
-	}
-  
-	.header__theme-menu {
-	  display: flex;
-	  padding-top: 4.0625rem;
-	  justify-content: flex-end;
-	}
-  
-	.header__theme-menu-list {
-	  flex-direction: column;
-	}
-	.header__title-container {
-	  gap: 8vh;
-	}
-	.header__subtitle {
-	  width: 100%;
-	}
-  
-	.main {
-	  padding: 0 10px;
-	  margin: 40px 0;
-	  row-gap: 50px;
-	  justify-content: start;
-	}
-  
-	.section {
-	  flex-direction: column;
-	}
-	.section-causes
-	{
-	  row-gap: 20px;
-	}
 
-	.section-pic{
-		row-gap: 10px;
-	}
-  
-	.section__image {
-	  display: flex;
-	  flex-direction: column;
-	  gap: 10px;
-	}
-  
-	.section__title {
-	  width: 100%;
-	}
-  
-	.article__causes {
-	  grid-template-columns: 1fr;
-	  grid-template-rows: repeat(3, min-content);
-	}
-  
-	.article__list {
-	  width: 100%;
-	}
-  
-	.footer {
-	  min-height: 648px;
-	}
-
-	.decorated-zone::before{
-		left: 10px;
-		 bottom: 10px;
-	}
-
-	.header__rec{
-		top: 10px;
-		right: 40px;
-	}
-
-	.decorated-zone::after{
-    	right: 10px;
-    	top: 10px;
-	}
-
-	.footer{
-		padding: 0 10px 10px;
-	}
+  .header__title {
+    font-size: 120px;
   }
-  
-  @media screen and (width <=400px) {
-	body {
-	  min-inline-size: 100%;
-	}
-	
-	
+
+  .header__theme-menu {
+    display: flex;
+    padding-top: 16.7777777778vh;
+    justify-content: flex-end;
   }
-  
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+  .header__title-container {
+    gap: 16vh;
+  }
+  .section__title {
+    width: 236px;
+  }
+
+  .article__text-bottom {
+    padding-bottom: 20px;
+  }
+
+  .article__way {
+    width: 66%;
+  }
+
+  .article__causes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  .footer {
+    min-height: 984px;
+  }
+
+  .footer__title {
+    font-size: 120px;
+  }
+}
+
+@media screen and (width <=700px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    row-gap: 4.0625rem;
+    min-height: 648px;
+    padding: 10px 10px 0;
+  }
+
+  .header__theme-menu {
+    display: flex;
+    padding-top: 4.0625rem;
+    justify-content: flex-end;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: column;
+  }
+  .header__title-container {
+    gap: 8vh;
+  }
+  .header__subtitle {
+    width: 100%;
+  }
+
+  .main {
+    padding: 0 10px;
+    margin: 40px 0;
+    row-gap: 50px;
+    justify-content: start;
+  }
+
+  .section {
+    flex-direction: column;
+  }
+  .section-causes {
+    row-gap: 20px;
+  }
+
+  .section-pic {
+    row-gap: 10px;
+  }
+
+  .section__image {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .section__title {
+    width: 100%;
+  }
+
+  .article__causes {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  .article__list {
+    width: 100%;
+  }
+
+  .footer {
+    min-height: 648px;
+    padding: 0 10px 10px;
+  }
+
+  .decorated-zone::before {
+    left: 10px;
+    bottom: 10px;
+  }
+
+  .header__rec {
+    top: 10px;
+    right: 40px;
+  }
+
+  .decorated-zone::after {
+    right: 10px;
+    top: 10px;
+  }
+}
+
+@media screen and (width <=400px) {
+  body {
+    min-inline-size: 100%;
+  }
+}
