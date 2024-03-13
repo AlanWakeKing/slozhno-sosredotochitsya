@@ -1,6 +1,7 @@
-:root
-{
-	--accent-color:#FF0070;
-	--transition-duration:0.3s;
-	--font-family: "IBM Plex mono", sans-serif;
+/*
+  Переменные для проекта
+  и их переопределение под различные устройства
+*/
+:root {
+  --font-family: "IBM Plex mono", sans-serif;
 }

@@ -1,32 +1,33 @@
-/* BODY*/
 .page {
-  display: grid;
-  grid-template-columns: 1fr;
-  background-image: var(--background-image);
+  background: var(--background-image) no-repeat top center, var(--background-color);
   background-attachment: fixed;
   background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
-	background-color: var(--background-color);
+  color: var(--main-text-color);
+  transition-duration: var(--transition-duration);
 }
-/* Header*/
+
 .header {
   display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr;
-  grid-template-rows: min-content min-content 1fr;
+  padding: 20px 20px 0;
   position: relative;
-  margin: 20px;
+  height: 100vh;
+  min-height: 668px;
+  grid-template-columns: 1fr min-content 1fr;
+  grid-template-rows: min-content;
+  row-gap: 36.28vh;
+  grid-template-areas:
+    ". menu ."
+    "title title title";
 }
+
 .header__rec {
-  display: block;
-  right: 28px;
-  top: 0;
   position: absolute;
-  line-height: 25px;
   color: var(--rec-color);
   text-transform: uppercase;
+  top: 21px;
+  right: 49px;
 }
+
 .header__rec::after {
   content: "";
   position: absolute;
@@ -39,22 +40,21 @@
   top: 50%;
   right: 0;
 }
-.header__theme-menu
-{
-	margin-block-end:clamp(3.611rem, -3.066rem + 28.488vw, 15.167rem);
+
+.header__theme-menu {
+  grid-area: menu;
 }
+
 .header__theme-menu-list {
   display: flex;
-  gap: 13px;
-  line-height: 18px;
   justify-content: center;
-  flex-direction: row;
+  gap: 12px;
 }
 
 .header__theme-menu-button {
   font-size: 18px;
   font-weight: 400;
-  color: var(--text);
+  color: var(--corners-color);
   line-height: 100%;
   padding: 2.5px 12px;
   border: transparent;
@@ -62,6 +62,7 @@
   transition-duration: var(--transition-duration);
   cursor: pointer;
 }
+
 .header__theme-menu-button:hover {
   border: var(--hover-color);
 }
@@ -72,105 +73,164 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--text);
+  border-bottom: 1px solid var(--corners-color);
 }
 
 .header__theme-menu-button_active {
   border: 1px solid;
   pointer-events: none;
 }
+
 .header__title {
-  margin: -2%;
-  /* font-size: 157px; */
-	font-size: clamp(7.25rem, 5.7694rem + 6.3174vw, 9.8125rem);
+  font-size: calc(157px);
   font-weight: 700;
+  margin-left: -2%;
   line-height: 82.5%;
-	color: var(--color-title);
-	text-shadow: 4px 4px 0 var(--accent-color);
+  letter-spacing: 0%;
+  color: var(--title-color);
+  text-shadow: 4px 4px 0px var(--title-shadow);
+  gap: 100vh;
 }
+
+.header__title-container {
+  grid-area: title;
+  display: flex;
+  flex-direction: column;
+  row-gap: 14.4vh;
+}
+
 .header__subtitle {
-	background-color: var(--article-title);
-	color:var(--article-subtitle);
-	align-self: center;
-	justify-self: flex-end;
-	font-weight: 700;
+  color: var(--article-title-color);
+  align-self: flex-end;
+  font-weight: 700;
   width: 50%;
-	text-align: left;
 }
-.header::before {
+
+.decorated-zone::before {
   content: "";
   position: absolute;
   width: 25px;
   height: 25px;
   border-left: 1px solid var(--corners-color);
   border-bottom: 1px solid var(--corners-color);
-  left: 0px;
+  left: 20px;
   bottom: 20px;
 }
 
-.header::after {
+.decorated-zone::after {
   content: "";
   position: absolute;
   width: 25px;
   height: 25px;
   border-right: 1px solid var(--corners-color);
   border-top: 1px solid var(--corners-color);
-  right: 0px;
-  top: 0px;
+  right: 20px;
+  top: 20px;
 }
-/* MAIN*/
-.main{
-	display: grid;
-	grid-template-columns: 1fr;
-	row-gap: 80px;
-	margin: 0 20px 0 20px;
+
+.main {
+  padding: 0 20px;
+  margin: 60px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: 80px;
 }
-.section{
-	display: grid;
-	gap:20px;
-	grid-template-columns: minmax(315px,min-content) 1fr;
+
+.section {
+  display: flex;
+  gap: 20px;
 }
-.section-causes{
-	grid-template-columns: 1fr;
+
+.section-causes,
+.section-pic {
+  flex-direction: column;
 }
-.section-causes__title{
-	grid-column: 1/-1;
-}
-.article__causes{
-	grid-template-columns: repeat(3,1fr);
-}
-.section__title{
-	grid-row: 1/-1;
-	font-size: 18px;
+
+.section__title {
+  width: 314.96px;
+  font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
   letter-spacing: 0%;
   text-align: left;
-  color: var(--article-title);
+  color: var(--section-title-color);
 }
-.article__list{
-	display: grid;
-	gap:20px;
-	align-items: start;
+
+.section__image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
+
+.image:first-of-type,
+.image:last-of-type {
+  grid-column: span 2;
+}
+
+.image:nth-of-type(2),
+.image:nth-of-type(3) {
+  grid-row: span 2;
+}
+
+.article__list {
+  display: grid;
+}
+
+.article__way,
+.article__advices {
+  width: 66%;
+  gap: 20px;
+}
+
+.article__causes {
+  grid-template-columns: repeat(auto-fill, 315px);
+  justify-content: space-between;
+  align-items: start;
+}
+
 .article__item {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 10px;
 }
-.article__title{
-	background-color: var(--article-title);
-	color: var(--article-subtitle);
+
+.article__title {
+  color: var(--article-title-color);
+  background-color: var(--title-shadow);
+}
+
+.article__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  text-align: left;
+}
+
+.image {
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+  height: 100%;
+}
+
+.title-decor {
+  width: 100%;
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0%;
+  text-align: left;
 }
 
 .link {
   border: transparent;
-  text-shadow: 3px 3px 0px var(--article-title);
+  text-shadow: 3px 3px 0px var(--link-shadow);
   transition-duration: var(--transition-duration);
 }
 
 .link:hover {
-  border-bottom: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--main-text-color);
 }
 
 .link:focus {
@@ -179,4 +239,29 @@
 
 .link:focus-visible {
   outline: 1px solid var(--main-text-color);
+}
+
+.footer {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  place-items: center; /* Центрирование по горизонтали и по вертикали */
+  position: relative;
+  padding: 20px;
+}
+
+.footer__title {
+  font-size: 157px;
+  font-weight: 700;
+  color: var(--title-color);
+  text-shadow: 2px 2px 0px var(--title-shadow);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+h4 { 
+  font-weight: normal; 
 }
